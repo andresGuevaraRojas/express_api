@@ -23,3 +23,12 @@ app.get('/v1/explorers',(req,res)=>{
 
     res.status(200).send(explorers)
 })
+
+app.get('/v1/explorers/:id',(req,res)=>{
+    console.log(`Api explorers GET requests ${new Date()}`)
+    console.log(`Getting explorer with id ${req.params.id}`)
+
+    const explorer = {id:1,name:'Carlo1'}
+    res.status(200).send(explorer)
+})
+
